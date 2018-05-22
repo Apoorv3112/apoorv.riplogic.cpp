@@ -6,6 +6,7 @@ using namespace std;
 int Quad()
 {
     double a,b,c,d,e,f;
+    system("cls");
   cout<<"QuadRCalv0.2 by Apoorv" << endl;
   cout<<"___________________________________________________" << endl;
   cout<<"enter the values of a, b & c" << endl;
@@ -32,7 +33,7 @@ int Quad()
   e=-(-b+d)/2*a;
   f=-(-b-d)/2*a;
   cout<<"the roots are x="<<e<<"x="<<f << endl;
-  cout<<"___________________________________________________";
+  cout<<"___________________________________________________" << endl;
   getch();
   return 0;
 }
@@ -121,8 +122,9 @@ int Prime()
 }
 
 
-int main()
-{
+int menu()
+{	
+	system("cls");
   int x;
   cout<<"Choose your poison" << endl;
   cout<<"press 1 for quadratic equation calculator" << endl;
@@ -140,12 +142,17 @@ int main()
   else if (x==3)
   {
      Prime();
-
   }
 }
-
-
-
-
-
-
+int main()
+{
+char r;
+  {
+   do 
+ {
+   menu();
+   cout<<"do you want to run this program again" << endl;
+   cin>>r;
+}while(r=='y'|| r=='Y');
+}
+}
